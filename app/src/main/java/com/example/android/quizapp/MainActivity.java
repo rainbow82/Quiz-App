@@ -95,6 +95,22 @@ public class MainActivity extends AppCompatActivity {
         return question_four_points;
     }
 
+     /*
+        Determine if right radio button chosen for question 5
+     */
+
+    public int question_five_points() {
+
+        RadioButton frankWelkerButton = (RadioButton) findViewById(R.id.question_five_correct_answer);
+        boolean isFrankWelker = frankWelkerButton.isChecked();
+
+        if(isFrankWelker){
+            return question_two_points += 2;
+        }
+
+        return question_two_points;
+    }
+
 
 
     /*
@@ -105,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         score += question_two_points();
         score += question_three_points();
         score += question_four_points();
+        score += question_five_points();
         return score;
 
     }

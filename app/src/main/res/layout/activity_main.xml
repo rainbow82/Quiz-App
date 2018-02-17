@@ -73,28 +73,24 @@
                     android:id="@+id/question_two_correct_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_two"
                     android:text="Mystery Machine" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_two_correct_answer"
                     android:text="Mystery Mobile" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_two_answer_a"
                     android:text="Scooby Mobile" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_two_answer_b"
                     android:text="Scooby Machine" />
 
             </RadioGroup>
@@ -151,6 +147,48 @@
                 android:layout_below="@id/question_four"
                 android:hint="Answer"
                 android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/question_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_four_answer"
+                android:text="5. Who has been the voice of Freddy since the beginning of the show?"
+                android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/question_five_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_five">
+
+                <RadioButton
+                    android:id="@+id/question_five_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casey Kasem" />
+
+                <RadioButton
+                    android:id="@+id/question_five_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don Knotts" />
+
+                <RadioButton
+                    android:id="@+id/question_five_correct_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frank Welker" />
+
+                <RadioButton
+                    android:id="@+id/question_five_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack Nicholson" />
+
+            </RadioGroup>
+
+
 
 
         </RelativeLayout>
