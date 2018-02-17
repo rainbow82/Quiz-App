@@ -2,9 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_repeat"
-    >
+    android:layout_height="match_parent" >
+    <!--android:background="@drawable/background_repeat"-->
+
 
     <LinearLayout
         android:id="@+id/parent_layout"
@@ -52,13 +52,64 @@
             android:inputType="textCapWords"
             android:layout_below="@id/question_one"/>
 
-        <Button
-            android:id="@+id/submit"
+
+
+        <TextView
+            android:id="@+id/question_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/question_one_answer"
-            android:text="Submit"
-            android:onClick="submitScore"/>
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:text="2. What is the nickname of the vehicle the gang rode in?"/>
+
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_two">
+
+            <RadioButton
+                android:id="@+id/question_two_correct_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_two"
+                android:text="Mystery Machine"/>
+
+        <RadioButton
+            android:id="@+id/question_two_answer_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_two_correct_answer"
+            android:text="Mystery Mobile"/>
+
+        <RadioButton
+            android:id="@+id/question_two_answer_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_two_answer_a"
+            android:text="Scooby Mobile"/>
+
+        <RadioButton
+            android:id="@+id/question_two_answer_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_two_answer_b"
+            android:text="Scooby Machine"/>
+
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+        <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Submit"
+        android:onClick="submitScore"/>
 
         <TextView
             android:id="@+id/total_score"
@@ -67,10 +118,5 @@
             android:layout_toRightOf="@id/submit"
             android:layout_below="@id/question_one_answer"
             android:text="Score"/>
-
-
-
-
-    </RelativeLayout>
     </LinearLayout>
 </ScrollView>
