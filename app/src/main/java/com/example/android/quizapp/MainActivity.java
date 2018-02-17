@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     int question_two_points = 0;
     int question_three_points = 0;
     int question_four_points = 0;
+    int question_five_points = 0;
+    int question_six_points = 0;
+    int question_seven_points = 0;
+    int question_eight_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isFrankWelker = frankWelkerButton.isChecked();
 
         if(isFrankWelker){
-            return question_two_points += 2;
+            return question_five_points += 2;
         }
 
-        return question_two_points;
+        return question_five_points;
     }
 
          /*
@@ -121,10 +125,38 @@ public class MainActivity extends AppCompatActivity {
         boolean isScoobySnacks = scoobySnacksButton.isChecked();
 
         if(isScoobySnacks){
-            return question_two_points += 2;
+            return question_six_points += 2;
         }
 
-        return question_two_points;
+        return question_six_points;
+    }
+
+    /**
+     get the user's answer, compare it to the correct answer
+     allow first or full name to count as correct
+     */
+    public int question_seven_points(){
+
+        EditText user_answered = (EditText) findViewById(R.id.question_seven_answer);
+        String user_answer =  user_answered.getText().toString();
+
+        if(user_answer.equals("Scrappy") || user_answer.equals("Scrappy Doo")){
+            return question_seven_points += 2 ;
+        }
+
+        return question_seven_points;
+    }
+
+    public int question_eight_points() {
+
+        RadioButton greatDaneButton = (RadioButton) findViewById(R.id.question_eight_correct_answer);
+        boolean isGreatDane = greatDaneButton.isChecked();
+
+        if(isGreatDane){
+            return question_eight_points += 2;
+        }
+
+        return question_eight_points;
     }
 
 
@@ -139,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
         score += question_four_points();
         score += question_five_points();
         score += question_six_points();
+        score += question_seven_points();
+        score += question_eight_points();
         return score;
 
     }

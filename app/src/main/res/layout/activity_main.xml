@@ -228,7 +228,63 @@
 
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/question_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_six_button_group"
+                android:text="7. What is the name of Scooby\'s nephew?"
+                android:textSize="25sp" />
 
+            <EditText
+                android:id="@+id/question_seven_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_seven"
+                android:hint="Answer"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/question_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_seven_answer"
+                android:text="8. Which breed is Scooby?"
+                android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/question_eight_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_eight">
+
+                <RadioButton
+                    android:id="@+id/question_eight_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Labrador" />
+
+                <RadioButton
+                    android:id="@+id/question_eight_correct_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Great Dane" />
+
+                <RadioButton
+                    android:id="@+id/question_eight_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Golden Retriever" />
+
+                <RadioButton
+                    android:id="@+id/question_eight_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boxer" />
+
+
+
+            </RadioGroup>
 
 
         </RelativeLayout>
