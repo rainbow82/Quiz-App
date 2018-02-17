@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     int question_one_points = 0;
     int question_two_points = 0;
+    int question_three_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Determine if right radio button chosen for question 2
      */
 
-    public int getQuestion_two_points() {
+    public int question_two_points() {
 
         RadioButton mysteryMachineButton = (RadioButton) findViewById(R.id.question_two_correct_answer);
         boolean isMysteryMachine = mysteryMachineButton.isChecked();
@@ -55,11 +56,38 @@ public class MainActivity extends AppCompatActivity {
         return question_two_points;
     }
 
+    /*
+        determine if correct boxes for question 3 are checked, add points for each box checked
+     */
+
+    public int question_three_points(){
+
+        CheckBox velmaCheckBox = (CheckBox) findViewById(R.id.question_three_answer_velma);
+        boolean isVelmaChecked = velmaCheckBox.isChecked();
+
+        CheckBox shaggyCheckBox = (CheckBox) findViewById(R.id.question_three_answer_shaggy);
+        boolean isShaggyChecked = shaggyCheckBox.isChecked();
+
+        if(isVelmaChecked){
+
+            question_three_points +=2;
+        }
+
+        if(isShaggyChecked){
+            question_three_points += 2;
+        }
+
+        return question_three_points;
+    }
 
 
+    /*
+        add the points for each question to the total score
+     */
     public int calculateScore(){
         score += question_one_points();
-        score += getQuestion_two_points();
+        score += question_two_points();
+        score += question_three_points();
         return score;
 
     }
