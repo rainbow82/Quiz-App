@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     int question_six_points = 0;
     int question_seven_points = 0;
     int question_eight_points = 0;
+    int question_nine_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,6 +160,19 @@ public class MainActivity extends AppCompatActivity {
         return question_eight_points;
     }
 
+    public int question_nine_points() {
+
+        RadioButton year1969Button = (RadioButton) findViewById(R.id.question_nine_correct_answer);
+        boolean isyear1969 = year1969Button.isChecked();
+
+        if(isyear1969){
+            return question_nine_points += 2;
+        }
+
+        return question_nine_points;
+    }
+
+
 
 
     /*
@@ -173,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
         score += question_six_points();
         score += question_seven_points();
         score += question_eight_points();
+        score += question_nine_points();
         return score;
 
     }

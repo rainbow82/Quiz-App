@@ -282,7 +282,45 @@
                     android:layout_height="wrap_content"
                     android:text="Boxer" />
 
+            </RadioGroup>
 
+            <TextView
+                android:id="@+id/question_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_eight_button_group"
+                android:text="9. What year was Scooby Doo created?"
+                android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/question_nine_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_nine">
+
+                <RadioButton
+                    android:id="@+id/question_nine_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1972" />
+
+                <RadioButton
+                    android:id="@+id/question_nine_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2002" />
+
+                <RadioButton
+                    android:id="@+id/question_nine_correct_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1969" />
+
+                <RadioButton
+                    android:id="@+id/question_nine_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1985" />
 
             </RadioGroup>
 
