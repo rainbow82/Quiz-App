@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
     <!--android:background="@drawable/background_repeat"-->
 
 
@@ -13,110 +13,146 @@
         android:orientation="vertical"
         tools:context="com.udacity.myapplication.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha="1.0">
-
-        <ImageView
-            android:id="@+id/scooby_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/scooby_head"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/scooby_head"
-            android:fontFamily="@font/scoobydoo"
-            android:text="Scooby Doo Quiz"
-            android:textColor="#000"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/question_one"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. What is Scooby's full name?"
-            android:textSize="25sp"
-            android:layout_below="@id/scooby_head"/>
+            android:alpha="1.0">
 
-        <EditText
-            android:id="@+id/question_one_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="textCapWords"
-            android:layout_below="@id/question_one"/>
-
-
-
-        <TextView
-            android:id="@+id/question_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question_one_answer"
-            android:layout_marginTop="16dp"
-            android:textSize="18sp"
-            android:text="2. What is the nickname of the vehicle the gang rode in?"/>
-
-
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question_two">
-
-            <RadioButton
-                android:id="@+id/question_two_correct_answer"
+            <ImageView
+                android:id="@+id/scooby_head"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_two"
-                android:text="Mystery Machine"/>
+                android:src="@drawable/scooby_head" />
 
-        <RadioButton
-            android:id="@+id/question_two_answer_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question_two_correct_answer"
-            android:text="Mystery Mobile"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/scooby_head"
+                android:fontFamily="@font/scoobydoo"
+                android:text="Scooby Doo Quiz"
+                android:textColor="#000"
+                android:textSize="25sp" />
 
-        <RadioButton
-            android:id="@+id/question_two_answer_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question_two_answer_a"
-            android:text="Scooby Mobile"/>
+            <TextView
+                android:id="@+id/question_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scooby_head"
+                android:text="1. What is Scooby's full name?"
+                android:textSize="25sp" />
 
-        <RadioButton
-            android:id="@+id/question_two_answer_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question_two_answer_b"
-            android:text="Scooby Machine"/>
-
-        </RadioGroup>
-
+            <EditText
+                android:id="@+id/question_one_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_one"
+                android:hint="Name"
+                android:inputType="textCapWords" />
 
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/question_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_one_answer"
+                android:layout_marginTop="16dp"
+                android:text="2. What is the nickname of the vehicle the gang rode in?"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/question_two_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_two">
+
+                <RadioButton
+                    android:id="@+id/question_two_correct_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_two"
+                    android:text="Mystery Machine" />
+
+                <RadioButton
+                    android:id="@+id/question_two_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_two_correct_answer"
+                    android:text="Mystery Mobile" />
+
+                <RadioButton
+                    android:id="@+id/question_two_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_two_answer_a"
+                    android:text="Scooby Mobile" />
+
+                <RadioButton
+                    android:id="@+id/question_two_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_two_answer_b"
+                    android:text="Scooby Machine" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_two_button_group"
+                android:layout_marginTop="16dp"
+                android:text="3. Choose the members of Mystery Inc"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/question_three_answer_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_three"
+                android:text="Velma"/>
+
+            <CheckBox
+                android:id="@+id/question_three_answer_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_three_answer_a"
+                android:text="Shaggy"/>
+
+            <CheckBox
+                android:id="@+id/question_three_answer_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_three_answer_b"
+                android:text="Wilma"/>
+
+            <CheckBox
+                android:id="@+id/question_three_answer_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_three_answer_c"
+                android:text="Barney"/>
+
+
+        </RelativeLayout>
+
         <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Submit"
-        android:onClick="submitScore"/>
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="submitScore"
+            android:text="Submit" />
 
         <TextView
             android:id="@+id/total_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/submit"
             android:layout_below="@id/question_one_answer"
-            android:text="Score"/>
+            android:layout_toRightOf="@id/submit"
+            android:text="Score" />
     </LinearLayout>
 </ScrollView>
