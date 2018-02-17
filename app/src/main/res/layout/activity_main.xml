@@ -324,6 +324,61 @@
 
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/question_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_nine_button_group"
+                android:layout_marginTop="16dp"
+                android:text="10. Who are Scooby\'s Relatives?\n Pick all that apply"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Dooby_Doo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_ten"
+                android:text="Dooby Doo"/>
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Rumsy_Doo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_ten"
+                android:layout_toRightOf="@id/question_ten_answer_Dooby_Doo"
+                android:text="Rumsy Doo"/>
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Spooky_Doo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_ten_answer_Dooby_Doo"
+                android:text="Spooky Doo"/>
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Scooby_Dum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_ten_answer_Darling_Doo"
+                android:layout_toRightOf="@id/question_ten_answer_Harold_Doo"
+                android:text="Scooby Dum"/>
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Harold_Doo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_ten_answer_Spooky_Doo"
+                android:text="Harold Doo"/>
+
+
+            <CheckBox
+                android:id="@+id/question_ten_answer_Darling_Doo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/question_ten_answer_Spooky_Doo"
+                android:layout_below="@id/question_ten_answer_Rumsy_Doo"
+                android:text="Darling Doo"/>
+
 
         </RelativeLayout>
 
