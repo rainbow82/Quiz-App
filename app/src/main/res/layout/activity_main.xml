@@ -109,31 +109,31 @@
                 android:textSize="18sp" />
 
             <CheckBox
-                android:id="@+id/question_three_answer_a"
+                android:id="@+id/question_three_answer_velma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three"
                 android:text="Velma"/>
 
             <CheckBox
-                android:id="@+id/question_three_answer_b"
+                android:id="@+id/question_three_answer_shaggy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_three_answer_a"
+                android:layout_below="@id/question_three_answer_velma"
                 android:text="Shaggy"/>
 
             <CheckBox
-                android:id="@+id/question_three_answer_c"
+                android:id="@+id/question_three_answer_wilma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_three_answer_b"
+                android:layout_below="@id/question_three_answer_shaggy"
                 android:text="Wilma"/>
 
             <CheckBox
-                android:id="@+id/question_three_answer_d"
+                android:id="@+id/question_three_answer_barney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_three_answer_c"
+                android:layout_below="@id/question_three_answer_wilma"
                 android:text="Barney"/>
 
 
