@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int question_seven_points = 0;
     int question_eight_points = 0;
     int question_nine_points = 0;
+    int question_ten_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,6 +174,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+     /*
+        determine if correct boxes for question 10 are checked, add points for each box checked
+     */
+
+    public int question_ten_points(){
+
+        CheckBox doobyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Dooby_Doo);
+        boolean isDoobyDooChecked = doobyDooCheckBox.isChecked();
+
+        CheckBox spookyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Spooky_Doo);
+        boolean isSpookyDooChecked = spookyDooCheckBox.isChecked();
+
+        CheckBox scoobyDumCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Scooby_Dum);
+        boolean isScoobyDumChecked = scoobyDumCheckBox.isChecked();
+
+        if(isDoobyDooChecked){
+
+            question_ten_points +=2;
+        }
+
+        if(isSpookyDooChecked){
+            question_ten_points += 2;
+        }
+
+        if(isScoobyDumChecked){
+            question_ten_points += 2;
+        }
+
+        return question_ten_points;
+    }
 
 
     /*
@@ -188,11 +219,10 @@ public class MainActivity extends AppCompatActivity {
         score += question_seven_points();
         score += question_eight_points();
         score += question_nine_points();
+        score += question_ten_points();
         return score;
 
     }
-
-
 
     /**
      * This method displays the score value on the screen.
