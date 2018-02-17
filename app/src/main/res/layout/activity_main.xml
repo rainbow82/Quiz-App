@@ -188,6 +188,46 @@
 
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/question_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_five_button_group"
+                android:text="6. What is Scooby\'s favorite snack?"
+                android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/question_six_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_six">
+
+                <RadioButton
+                    android:id="@+id/question_six_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Cake" />
+
+                <RadioButton
+                    android:id="@+id/question_six_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruit Snacks" />
+
+                <RadioButton
+                    android:id="@+id/question_six_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carrot Sticks" />
+
+                <RadioButton
+                    android:id="@+id/question_six_correct_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scooby Snacks" />
+
+            </RadioGroup>
+
 
 
 

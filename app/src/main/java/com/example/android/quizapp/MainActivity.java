@@ -111,6 +111,22 @@ public class MainActivity extends AppCompatActivity {
         return question_two_points;
     }
 
+         /*
+        Determine if right radio button chosen for question 6
+     */
+
+    public int question_six_points() {
+
+        RadioButton scoobySnacksButton = (RadioButton) findViewById(R.id.question_six_correct_answer);
+        boolean isScoobySnacks = scoobySnacksButton.isChecked();
+
+        if(isScoobySnacks){
+            return question_two_points += 2;
+        }
+
+        return question_two_points;
+    }
+
 
 
     /*
@@ -122,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         score += question_three_points();
         score += question_four_points();
         score += question_five_points();
+        score += question_six_points();
         return score;
 
     }
@@ -136,7 +153,8 @@ public class MainActivity extends AppCompatActivity {
         totalScore.setText("" + number);
     }
 
-    public void submitScore(View view){
+    public void submitScore(View view)
+    {
         display(calculateScore());
     }
 }
