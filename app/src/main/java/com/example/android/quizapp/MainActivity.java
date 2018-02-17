@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int question_one_points = 0;
     int question_two_points = 0;
     int question_three_points = 0;
+    int question_four_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         if(isMysteryMachine){
             return question_two_points += 2;
-//           / Toast.makeText(this, "Only one answer can be chosen", Toast.LENGTH_SHORT).show();
-
         }
 
         return question_two_points;
@@ -80,6 +79,23 @@ public class MainActivity extends AppCompatActivity {
         return question_three_points;
     }
 
+    /**
+     get the user's answer, compare it to the correct answer
+     */
+    public int question_four_points(){
+        String correct_answer = "Coolsville";
+
+        EditText user_answered = (EditText) findViewById(R.id.question_four_answer);
+        String user_answer =  user_answered.getText().toString();
+
+        if(user_answer.equals(correct_answer)){
+            return question_four_points += 2 ;
+        }
+
+        return question_four_points;
+    }
+
+
 
     /*
         add the points for each question to the total score
@@ -88,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         score += question_one_points();
         score += question_two_points();
         score += question_three_points();
+        score += question_four_points();
         return score;
 
     }
