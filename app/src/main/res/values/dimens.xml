@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="quizNameMarginTop">31dp</dimen>
+    <dimen name="quizNameSize">40sp</dimen>
+
     <dimen name="question_size">25sp</dimen>
     <dimen name="question_margin_left">10dp</dimen>
+
+    <dimen name="questionMarginTop">25dp</dimen>
 </resources>

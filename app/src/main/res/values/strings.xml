@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="displayedQuizName">Scooby Doo\n Quiz</string>
+
+    <!-- question text -->
+    <string name="question_one_text">1. What is Scooby\'s full name?</string>
+    <string name="question_two_text">2. What is the nickname of the vehicle the gang rode in?</string>
+    <string name="question_three_text">3. Choose the members of Mystery Inc</string>
+    <string name="question_four_text">4. What city is the gang from?</string>
+    <string name="question_five_text">5. Who has been the voice of Freddy since the beginning of the show?</string>
+    <string name="question_six_text">6. What is Scooby\'s favorite snack?</string>
+    <string name="question_seven_text">7. What is the name of Scooby\'s nephew?</string>
+    <string name="question_eight_text">8. What breed is Scooby?</string>
+    <string name="question_nine_text">9. What year was Scooby Doo created?</string>
+    <string name="question_ten_text">10. Who are Scooby\'s relatives?</string>
+
+    <!-- question answers -->
+    <string name="hints">Answer</string>
+
+    <!-- question 2 radio answers -->
+    <string name="question_two_correct_answer">Mystery Machine</string>
+    <string name="question_two_answer_a">Mystery Mobile</string>
+    <string name="question_two_answer_b">Scooby Mobile</string>
+    <string name="question_two_answer_c">Scooby Machine</string>
+
+    <!-- question 3 checkbox answers-->
+    <string name="question3_box1">Velma</string>
+    <string name="question3_box2">Shaggy</string>
+    <string name="question3_box3">Wilma</string>
+    <string name="question3_box4">Barney</string>
 </resources>

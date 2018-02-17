@@ -4,11 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_repeat">
-    <!---->
-
 
     <LinearLayout
-        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -28,13 +25,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/question_one"
-                android:layout_marginTop="31dp"
+                android:layout_marginTop="@dimen/quizNameMarginTop"
                 android:layout_toEndOf="@+id/question_five_button_group"
                 android:layout_toRightOf="@+id/question_five_button_group"
-                android:text="Scooby Doo\n Quiz"
+                android:text="@string/displayedQuizName"
                 android:gravity="center"
-                android:textColor="#512DA8"
-                android:textSize="40sp"
+                android:textColor="@color/quizNameColor"
+                android:textSize="@dimen/quizNameSize"
                 android:textStyle="bold" />
 
             <TextView
@@ -42,11 +39,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/scooby_head"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_marginLeft="@dimen/question_margin_left"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="1. What is Scooby's full name?"
+                android:text="@string/question_one_text"
                 android:textSize="@dimen/question_size" />
 
             <EditText
@@ -56,9 +53,9 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/answerColor"
                 android:layout_below="@id/question_one"
-                android:hint="Answer"
+                android:hint="@string/hints"
                 android:textStyle="bold"
-                android:textColorHint="#C51162"
+                android:textColorHint="@color/answerColor"
                 android:inputType="textCapWords" />
 
 
@@ -67,14 +64,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_one_answer"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_marginLeft="@dimen/question_margin_left"
                 android:textColor="@color/questionColor"
-                android:fontFamily="@font/scoobydoo"
                 android:textStyle="bold"
-                android:text="2. What is the nickname of the vehicle the gang rode in?"
+                android:text="@string/question_two_text"
                 android:textSize="@dimen/question_size" />
-
 
             <RadioGroup
                 android:id="@+id/question_two_button_group"
@@ -88,25 +83,31 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Mystery Machine" />
+                    android:text="@string/question_two_correct_answer" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mystery Mobile" />
+                    android:textColor="@color/answerColor"
+                    android:textStyle="bold"
+                    android:text="@string/question_two_answer_a" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Scooby Mobile" />
+                    android:textColor="@color/answerColor"
+                    android:textStyle="bold"
+                    android:text="@string/question_two_answer_b" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Scooby Machine" />
+                    android:textColor="@color/answerColor"
+                    android:textStyle="bold"
+                    android:text="@string/question_two_answer_c" />
 
             </RadioGroup>
 
@@ -117,65 +118,72 @@
                 android:layout_below="@id/question_two_button_group"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:text="3. Choose the members of Mystery Inc"
-                android:textSize="18sp" />
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
+                android:text="@string/question_three_text"
+                android:textSize="@dimen/question_size" />
 
             <CheckBox
                 android:id="@+id/question_three_answer_velma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three"
-                android:text="Velma"/>
+                android:text="@string/question3_box1"/>
 
             <CheckBox
                 android:id="@+id/question_three_answer_shaggy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three_answer_velma"
-                android:text="Shaggy"/>
+                android:text="@string/question3_box2"/>
 
             <CheckBox
                 android:id="@+id/question_three_answer_wilma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three_answer_shaggy"
-                android:text="Wilma"/>
+                android:text="@string/question3_box3"/>
 
             <CheckBox
                 android:id="@+id/question_three_answer_barney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three_answer_wilma"
-                android:text="Barney"/>
+                android:text="@string/question3_box4"/>
 
             <TextView
                 android:id="@+id/question_four"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three_answer_barney"
+                android:layout_marginLeft="@dimen/question_margin_left"
+                android:layout_marginTop="@dimen/questionMarginTop"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="4. What city is the gang from?"
-                android:textSize="25sp" />
+                android:text="@string/question_four_text"
+                android:textSize="@dimen/question_size" />
 
             <EditText
                 android:id="@+id/question_four_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_four"
-                android:hint="Answer"
+                android:hint="@string/hints"
+                android:textStyle="bold"
+                android:textColorHint="@color/answerColor"
                 android:inputType="textCapWords" />
 
             <TextView
                 android:id="@+id/question_five"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_four_answer"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="5. Who has been the voice of Freddy since the beginning of the show?"
-                android:textSize="25sp" />
+                android:text="@string/question_five_text"
+                android:textSize="@dimen/question_size" />
 
             <RadioGroup
                 android:id="@+id/question_five_button_group"
@@ -213,10 +221,12 @@
                 android:id="@+id/question_six"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_five_button_group"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="6. What is Scooby\'s favorite snack?"
+                android:text="@string/question_six_text"
                 android:textSize="25sp" />
 
             <RadioGroup
@@ -255,10 +265,12 @@
                 android:id="@+id/question_seven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_six_button_group"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="7. What is the name of Scooby\'s nephew?"
+                android:text="@string/question_seven_text"
                 android:textSize="25sp" />
 
             <EditText
@@ -273,10 +285,12 @@
                 android:id="@+id/question_eight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_seven_answer"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="8. What breed is Scooby?"
+                android:text="@string/question_eight_text"
                 android:textSize="25sp" />
 
             <RadioGroup
@@ -315,10 +329,12 @@
                 android:id="@+id/question_nine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_eight_button_group"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:text="9. What year was Scooby Doo created?"
+                android:text="@string/question_nine_text"
                 android:textSize="25sp" />
 
             <RadioGroup
@@ -357,12 +373,13 @@
                 android:id="@+id/question_ten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_marginLeft="@dimen/question_margin_left"
                 android:layout_below="@id/question_nine_button_group"
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:text="10. Who are Scooby\'s Relatives?\n Pick all that apply"
-                android:textSize="18sp" />
+                android:text="@string/question_ten_text"
+                android:textSize="@dimen/question_size" />
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Dooby_Doo"
