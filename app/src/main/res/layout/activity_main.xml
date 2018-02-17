@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_one"
-                android:hint="Name"
+                android:hint="Answer"
                 android:inputType="textCapWords" />
 
 
@@ -135,6 +135,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three_answer_wilma"
                 android:text="Barney"/>
+
+            <TextView
+                android:id="@+id/question_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_three_answer_barney"
+                android:text="4. What city is the gang from?"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/question_four_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_four"
+                android:hint="Answer"
+                android:inputType="textCapWords" />
 
 
         </RelativeLayout>
