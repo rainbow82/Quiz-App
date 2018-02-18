@@ -80,17 +80,17 @@
                     android:id="@+id/question_two_correct_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/question_two_correct_answer"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
-                    android:text="@string/question_two_correct_answer" />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/question_two_answer_a"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
-                    android:text="@string/question_two_answer_a" />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_b"
@@ -114,12 +114,14 @@
                 android:id="@+id/question_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question_two_button_group"
-                android:textColor="@color/questionColor"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/questionMarginTop"
+                android:layout_alignEnd="@+id/question_ten"
+                android:layout_alignRight="@+id/question_ten"
+                android:layout_below="@+id/question_two_button_group"
+                android:layout_marginTop="28dp"
                 android:text="@string/question_three_text"
-                android:textSize="@dimen/question_size" />
+                android:textColor="@color/questionColor"
+                android:textSize="@dimen/question_size"
+                android:textStyle="bold" />
 
             <CheckBox
                 android:id="@+id/question_three_answer_velma"
@@ -143,19 +145,23 @@
                 android:id="@+id/question_three_answer_wilma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/question_three_answer_barney"
+                android:layout_alignStart="@+id/question_three_answer_barney"
+                android:layout_below="@+id/question_three"
+                android:text="@string/question3_box3"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
-                android:layout_below="@id/question_three_answer_shaggy"
-                android:text="@string/question3_box3"/>
+                android:textStyle="bold" />
 
             <CheckBox
                 android:id="@+id/question_three_answer_barney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/question_three_answer_wilma"
+                android:layout_toEndOf="@+id/question_eight_button_group"
+                android:layout_toRightOf="@+id/question_eight_button_group"
+                android:text="@string/question3_box4"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
-                android:layout_below="@id/question_three_answer_wilma"
-                android:text="@string/question3_box4"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/question_four"
