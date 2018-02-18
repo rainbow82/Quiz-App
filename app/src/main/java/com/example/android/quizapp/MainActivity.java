@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isyear1969 = year1969Button.isChecked();
 
         if(isyear1969){
+
             return question_nine_points += 2;
         }
 
