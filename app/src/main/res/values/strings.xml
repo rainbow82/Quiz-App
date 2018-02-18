@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Quiz App</string>
     <string name="displayedQuizName">Scooby Doo\n Quiz</string>
+    <string name="buttonText">Submit</string>
+    <string name="scoreText">Score</string>
 
     <!-- question text -->
     <string name="question_one_text">1. What is Scooby\'s full name?</string>
@@ -28,4 +30,36 @@
     <string name="question3_box2">Shaggy</string>
     <string name="question3_box3">Wilma</string>
     <string name="question3_box4">Barney</string>
+
+    <!-- queston 5 radio answers -->
+    <string name="question_five_answer_a">Casey Kasem</string>
+    <string name="question_five_answer_b">Don Knotts</string>
+    <string name="question_five_answer_c">Jack Nicholson</string>
+    <string name="question_five_correct_answer">Frank Welker</string>
+
+    <!-- queston 6 radio answers -->
+    <string name="question_six_answer_a">Chocolate Cake</string>
+    <string name="question_six_answer_b">Fruit Snacks</string>
+    <string name="question_six_answer_c">Carrot Sticks</string>
+    <string name="question_six_correct_answer">Scooby Snacks</string>
+
+    <!-- queston 8 radio answers -->
+    <string name="question_eight_answer_a">Labrador</string>
+    <string name="question_eight_answer_b">Golden Retriever</string>
+    <string name="question_eight_answer_c">Boxer</string>
+    <string name="question_eight_correct_answer">Great Dane</string>
+
+    <!-- queston 9 radio answers -->
+    <string name="question_nine_answer_a">1972</string>
+    <string name="question_nine_answer_b">2002</string>
+    <string name="question_nine_answer_c">Boxer</string>
+    <string name="question_nine_correct_answer">1985</string>
+
+    <!-- question 10 checkbox answers-->
+    <string name="question10_box1">Dooby Doo"</string>
+    <string name="question10_box2">Rumsy Doo</string>
+    <string name="question10_box3">Spooky Doo</string>
+    <string name="question10_box4">Scooby Dum"</string>
+    <string name="question10_box5">Harold Doo</string>
+    <string name="question10_box6">Darling Doo</string>
 </resources>

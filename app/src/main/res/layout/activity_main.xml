@@ -205,7 +205,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Casey Kasem" />
+                    android:text="@string/question_five_answer_a" />
 
                 <RadioButton
                     android:id="@+id/question_five_answer_b"
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Don Knotts" />
+                    android:text="@string/question_five_answer_b" />
 
                 <RadioButton
                     android:id="@+id/question_five_correct_answer"
@@ -221,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Frank Welker" />
+                    android:text="@string/question_five_correct_answer" />
 
                 <RadioButton
                     android:id="@+id/question_five_answer_c"
@@ -229,7 +229,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Jack Nicholson" />
+                    android:text="@string/question_five_answer_c" />
 
             </RadioGroup>
 
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Chocolate Cake" />
+                    android:text="@string/question_six_answer_a" />
 
                 <RadioButton
                     android:id="@+id/question_six_answer_b"
@@ -265,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Fruit Snacks" />
+                    android:text="@string/question_six_answer_b" />
 
                 <RadioButton
                     android:id="@+id/question_six_answer_c"
@@ -273,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Carrot Sticks" />
+                    android:text="@string/question_six_answer_c" />
 
                 <RadioButton
                     android:id="@+id/question_six_correct_answer"
@@ -281,7 +281,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
                     android:textStyle="bold"
-                    android:text="Scooby Snacks" />
+                    android:text="@string/question_six_correct_answer" />
 
             </RadioGroup>
 
@@ -331,7 +331,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="Labrador" />
+                    android:text="question_eight_answer_a" />
 
                 <RadioButton
                     android:id="@+id/question_eight_correct_answer"
@@ -339,7 +339,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="Great Dane" />
+                    android:text="question_eight_correct_answer" />
 
                 <RadioButton
                     android:id="@+id/question_eight_answer_b"
@@ -347,7 +347,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="Golden Retriever" />
+                    android:text="question_eight_answer_b" />
 
                 <RadioButton
                     android:id="@+id/question_eight_answer_c"
@@ -355,7 +355,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="Boxer" />
+                    android:text="question_eight_answer_c" />
 
             </RadioGroup>
 
@@ -383,7 +383,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="1972" />
+                    android:text="@string/question_nine_answer_a" />
 
                 <RadioButton
                     android:id="@+id/question_nine_answer_b"
@@ -391,7 +391,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="2002" />
+                    android:text="@string/question_nine_answer_b" />
 
                 <RadioButton
                     android:id="@+id/question_nine_correct_answer"
@@ -399,7 +399,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="1969" />
+                    android:text="@string/question_nine_correct_answer" />
 
                 <RadioButton
                     android:id="@+id/question_nine_answer_c"
@@ -407,7 +407,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/questionColor"
                     android:textStyle="bold"
-                    android:text="1985" />
+                    android:text="@string/question_nine_answer_c" />
 
             </RadioGroup>
 
@@ -430,7 +430,7 @@
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
                 android:layout_below="@id/question_ten"
-                android:text="Dooby Doo"/>
+                android:text="@string/question10_box1"/>
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Rumsy_Doo"
@@ -440,7 +440,7 @@
                 android:textStyle="bold"
                 android:layout_below="@id/question_ten"
                 android:layout_toRightOf="@id/question_ten_answer_Dooby_Doo"
-                android:text="Rumsy Doo"/>
+                android:text="@string/question10_box2"/>
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Spooky_Doo"
@@ -449,7 +449,7 @@
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
                 android:layout_below="@id/question_ten_answer_Dooby_Doo"
-                android:text="Spooky Doo"/>
+                android:text="@string/question10_box3"/>
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Scooby_Dum"
@@ -459,7 +459,7 @@
                 android:textStyle="bold"
                 android:layout_below="@id/question_ten_answer_Darling_Doo"
                 android:layout_toRightOf="@id/question_ten_answer_Harold_Doo"
-                android:text="Scooby Dum"/>
+                android:text="@string/question10_box4"/>
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Harold_Doo"
@@ -468,7 +468,7 @@
                 android:textColor="@color/questionColor"
                 android:textStyle="bold"
                 android:layout_below="@id/question_ten_answer_Spooky_Doo"
-                android:text="Harold Doo"/>
+                android:text="@string/question10_box5"/>
 
 
             <CheckBox
@@ -479,8 +479,7 @@
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/question_ten_answer_Spooky_Doo"
                 android:layout_below="@id/question_ten_answer_Rumsy_Doo"
-                android:text="Darling Doo"/>
-
+                android:text="@string/question10_box6"/>
 
         </RelativeLayout>
 
@@ -490,7 +489,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:onClick="submitScore"
-            android:text="Submit" />
+            android:text="@string/buttonText" />
 
         <TextView
             android:id="@+id/total_score"
@@ -498,6 +497,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/question_one_answer"
             android:layout_toRightOf="@id/submit"
-            android:text="Score" />
+            android:text="@string/scoreText" />
     </LinearLayout>
 </ScrollView>
