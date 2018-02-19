@@ -3,7 +3,7 @@
     <string name="displayedQuizName">Scooby Doo\n Quiz</string>
     <string name="submitButtonText">Submit</string>
     <string name="resetButtonText">Reset</string>
-    <string name="scoreText">Score</string>
+    <string name="scoreText">Score\: </string>
     <string name="ScoreAmount">\?</string>
 
     <!-- question text -->

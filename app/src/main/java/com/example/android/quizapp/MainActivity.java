@@ -218,8 +218,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private void display(int number) {
         TextView totalScore = (TextView) findViewById(R.id.total_score);
-        totalScore.setText("" + score);
+        totalScore.setText(" " + score);
     }
+
 
     public void submitScore(View view)
     {
@@ -230,14 +231,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void clearScreen(View view){
-        reset();
-    }
-
-    public void reset() {
-
         Intent intent = getIntent();
         finish();
         startActivity(intent);
-
     }
+
 }

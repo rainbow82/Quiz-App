@@ -8,4 +8,6 @@
 
     <dimen name="questionMarginTop">25dp</dimen>
 
+    <dimen name="scoreLayou_margintop">10dp</dimen>
+
 </resources>
