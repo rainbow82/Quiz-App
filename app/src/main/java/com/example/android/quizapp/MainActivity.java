@@ -228,21 +228,6 @@ public class MainActivity extends AppCompatActivity {
         display(calculateScore());
     }
 
-//    public void clearScreen(View view){
-//        EditText user_answered_one = (EditText) findViewById(R.id.question_one_answer);
-//        user_answered_one.getText().clear();
-//
-//        EditText user_answered_four = (EditText) findViewById(R.id.question_four_answer);
-//        user_answered_four.getText().clear();
-//
-//        EditText user_answered_seven = (EditText) findViewById(R.id.question_seven_answer);
-//        user_answered_seven.getText().clear();
-//    }
-//
-//    public void reset(View view) {
-//
-//        this.recreate();
-//    }
 
     public void clearScreen(View view){
         reset();
