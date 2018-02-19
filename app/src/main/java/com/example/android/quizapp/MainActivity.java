@@ -3,6 +3,7 @@ package com.example.android.quizapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,16 +13,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
-    int question_one_points = 0;
-    int question_two_points = 0;
-    int question_three_points = 0;
-    int question_four_points = 0;
-    int question_five_points = 0;
-    int question_six_points = 0;
-    int question_seven_points = 0;
-    int question_eight_points = 0;
-    int question_nine_points = 0;
-    int question_ten_points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         String user_answer =  user_answered.getText().toString();
 
         if(user_answer.equals(correct_answer)){
-            return question_one_points += 2 ;
+            score += 2 ;
         }
 
-        return question_one_points;
+        return score;
     }
 
     /*
@@ -55,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isMysteryMachine = mysteryMachineButton.isChecked();
 
         if(isMysteryMachine){
-            return question_two_points += 2;
+            score += 2;
         }
 
-        return question_two_points;
+        return score;
     }
 
     /*
@@ -75,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
 
         if(isVelmaChecked){
 
-            question_three_points +=2;
+            score +=2;
         }
 
         if(isShaggyChecked){
-            question_three_points += 2;
+            score += 2;
         }
 
-        return question_three_points;
+        return score;
     }
 
     /**
@@ -95,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
         String user_answer =  user_answered.getText().toString();
 
         if(user_answer.equals(correct_answer)){
-            return question_four_points += 2 ;
+            return score += 2 ;
         }
 
-        return question_four_points;
+        return score;
     }
 
      /*
@@ -111,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isFrankWelker = frankWelkerButton.isChecked();
 
         if(isFrankWelker){
-            return question_five_points += 2;
+            return score += 2;
         }
 
-        return question_five_points;
+        return score;
     }
 
          /*
@@ -127,10 +118,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isScoobySnacks = scoobySnacksButton.isChecked();
 
         if(isScoobySnacks){
-            return question_six_points += 2;
+            return score += 2;
         }
 
-        return question_six_points;
+        return score;
     }
 
     /**
@@ -142,11 +133,15 @@ public class MainActivity extends AppCompatActivity {
         EditText user_answered = (EditText) findViewById(R.id.question_seven_answer);
         String user_answer =  user_answered.getText().toString();
 
-        if(user_answer.equals("Scrappy") || user_answer.equals("Scrappy Doo")){
-            return question_seven_points += 2 ;
+        if(user_answer.equals("Scrappy")){
+            return score += 2 ;
         }
 
-        return question_seven_points;
+        if(user_answer.equals("Scrappy Doo")){
+            score += 2;
+        }
+
+        return score;
     }
 
     public int question_eight_points() {
@@ -155,10 +150,10 @@ public class MainActivity extends AppCompatActivity {
         boolean isGreatDane = greatDaneButton.isChecked();
 
         if(isGreatDane){
-            return question_eight_points += 2;
+            return score += 2;
         }
 
-        return question_eight_points;
+        return score;
     }
 
     public int question_nine_points() {
@@ -168,10 +163,10 @@ public class MainActivity extends AppCompatActivity {
 
         if(isyear1969){
 
-            return question_nine_points += 2;
+            return score += 2;
         }
 
-        return question_nine_points;
+        return score;
     }
 
 
@@ -192,18 +187,18 @@ public class MainActivity extends AppCompatActivity {
 
         if(isDoobyDooChecked){
 
-            question_ten_points +=2;
+            score +=2;
         }
 
         if(isSpookyDooChecked){
-            question_ten_points += 2;
+            score += 2;
         }
 
         if(isScoobyDumChecked){
-            question_ten_points += 2;
+            score += 2;
         }
 
-        return question_ten_points;
+        return score;
     }
 
 
@@ -211,18 +206,9 @@ public class MainActivity extends AppCompatActivity {
         add the points for each question to the total score
      */
     public int calculateScore(){
-        score += question_one_points();
-        score += question_two_points();
-        score += question_three_points();
-        score += question_four_points();
-        score += question_five_points();
-        score += question_six_points();
-        score += question_seven_points();
-        score += question_eight_points();
-        score += question_nine_points();
-        score += question_ten_points();
-        return score;
-
+        return question_one_points() + question_two_points() + question_three_points() +
+                question_four_points() + question_five_points() + question_six_points() +
+                question_seven_points() + question_eight_points() + question_nine_points() + question_ten_points();
     }
 
     /**
@@ -230,11 +216,13 @@ public class MainActivity extends AppCompatActivity {
      */
     private void display(int number) {
         TextView totalScore = (TextView) findViewById(R.id.total_score);
-        totalScore.setText("" + number);
+        totalScore.setText("" + score);
     }
 
     public void submitScore(View view)
     {
+        Button submitButton = (Button) findViewById(R.id.submit);
+        submitButton.setEnabled(false);
         display(calculateScore());
     }
 }

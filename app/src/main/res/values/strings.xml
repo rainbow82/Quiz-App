@@ -52,8 +52,8 @@
     <!-- queston 9 radio answers -->
     <string name="question_nine_answer_a">1972</string>
     <string name="question_nine_answer_b">2002</string>
-    <string name="question_nine_answer_c">Boxer</string>
-    <string name="question_nine_correct_answer">1985</string>
+    <string name="question_nine_answer_c">1985</string>
+    <string name="question_nine_correct_answer">1969</string>
 
     <!-- question 10 checkbox answers-->
     <string name="question10_box1">Dooby Doo"</string>
