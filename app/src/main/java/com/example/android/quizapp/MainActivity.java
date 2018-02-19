@@ -137,9 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(user_answer.equals("Scrappy")){
             return score += 2 ;
-        }
-
-        if(user_answer.equals("Scrappy Doo")){
+        }else if(user_answer.equals("Scrappy Doo")){
             score += 2;
         }
 
@@ -218,15 +216,19 @@ public class MainActivity extends AppCompatActivity {
      */
     private void display(int number) {
         TextView totalScore = (TextView) findViewById(R.id.total_score);
-        totalScore.setText(" " + score);
+        totalScore.setText("" + score);
     }
 
-
+    /*
+        Disable the button so it can't be pressed again
+        Display the score
+     */
     public void submitScore(View view)
     {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
         display(calculateScore());
+        Toast.makeText(this, "Your score is "+ score, Toast.LENGTH_SHORT).show();
     }
 
 
