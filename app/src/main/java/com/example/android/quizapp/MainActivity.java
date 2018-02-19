@@ -1,6 +1,7 @@
 package com.example.android.quizapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -227,11 +228,31 @@ public class MainActivity extends AppCompatActivity {
         display(calculateScore());
     }
 
+//    public void clearScreen(View view){
+//        EditText user_answered_one = (EditText) findViewById(R.id.question_one_answer);
+//        user_answered_one.getText().clear();
+//
+//        EditText user_answered_four = (EditText) findViewById(R.id.question_four_answer);
+//        user_answered_four.getText().clear();
+//
+//        EditText user_answered_seven = (EditText) findViewById(R.id.question_seven_answer);
+//        user_answered_seven.getText().clear();
+//    }
+//
+//    public void reset(View view) {
+//
+//        this.recreate();
+//    }
+
     public void clearScreen(View view){
-        reset(view);
+        reset();
     }
 
-    public void reset(View view) {
-        this.recreate();
+    public void reset() {
+
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+
     }
 }
