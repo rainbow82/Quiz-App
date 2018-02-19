@@ -1,5 +1,7 @@
 package com.example.android.quizapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -224,5 +226,18 @@ public class MainActivity extends AppCompatActivity {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
         display(calculateScore());
+    }
+
+
+    public void clearScreen(View view){
+        reset();
+    }
+
+    public void reset() {
+
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+
     }
 }

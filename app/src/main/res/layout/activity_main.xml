@@ -10,9 +10,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginLeft="@dimen/question_margin_left"
+        android:layout_marginRight="@dimen/question_margin_left"
         tools:context="com.udacity.myapplication.MainActivity">
 
         <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -473,7 +475,6 @@
                 android:layout_below="@id/question_ten_answer_Spooky_Doo"
                 android:text="@string/question10_box5"/>
 
-
             <CheckBox
                 android:id="@+id/question_ten_answer_Darling_Doo"
                 android:layout_width="wrap_content"
@@ -487,20 +488,57 @@
 
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:onClick="submitScore"
-            android:text="@string/buttonText" />
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/submit_button"
+                android:onClick="submitScore"
+                android:text="@string/submitButtonText" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/reset_button"
+                android:onClick="clearScreen"
+                android:text="@string/resetButtonText" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
 
         <TextView
-            android:id="@+id/total_score"
+            android:id="@+id/scoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question_one_answer"
-            android:layout_toRightOf="@id/submit"
-            android:text="@string/scoreText" />
+            android:textColor="@color/answerColor"
+            android:textSize="@dimen/question_size"
+            android:textStyle="bold"
+            android:text="@string/scoreText"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/totalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/answerColor"
+            android:textSize="@dimen/question_size"
+            android:textStyle="bold"
+            android:text="@string/ScoreAmount" />
+
+    </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
