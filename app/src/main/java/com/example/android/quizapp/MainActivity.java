@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
         display(calculateScore());
-        Toast.makeText(this, "Your score is "+ score, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, String.format(getString(R.string.scoreMessage), score), Toast.LENGTH_SHORT).show();
     }
 
 

@@ -5,6 +5,7 @@
     <string name="resetButtonText">Reset</string>
     <string name="scoreText">Score\: </string>
     <string name="ScoreAmount">\?</string>
+    <string name="scoreMessage">"Your score is  %1$d </string>
 
     <!-- question text -->
     <string name="question_one_text">1. What is Scooby\'s full name?</string>
