@@ -485,7 +485,15 @@
                 android:textColor="@color/answerColor"
                 android:textStyle="bold" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restart"
+                android:onClick="clearScreen"
+                />
+
         </RelativeLayout>
+
 
         <Button
             android:id="@+id/submit"
@@ -502,5 +510,7 @@
             android:layout_below="@id/question_one_answer"
             android:layout_toRightOf="@id/submit"
             android:text="@string/scoreText" />
+
+
     </LinearLayout>
 </ScrollView>
