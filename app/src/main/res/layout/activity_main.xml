@@ -181,6 +181,7 @@
                 android:layout_below="@id/question_four"
                 android:hint="@string/hints"
                 android:textStyle="bold"
+                android:textColor="@color/answerColor"
                 android:textColorHint="@color/answerColor"
                 android:inputType="textCapWords" />
 
@@ -304,6 +305,7 @@
                 android:layout_below="@id/question_seven"
                 android:hint="@string/hints"
                 android:textStyle="bold"
+                android:textColor="@color/answerColor"
                 android:textColorHint="@color/answerColor"
                 android:inputType="textCapWords" />
 
