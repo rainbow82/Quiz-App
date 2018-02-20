@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // As an FYI you see how all your type casts are gray? That's because they're
+        // redundant and not required.  You can safely remove them if you like.
         user_answered_question_one = (EditText) findViewById(R.id.question_one_answer);
         mysteryMachineButton = (RadioButton) findViewById(R.id.question_two_correct_answer);
         velmaCheckBox = (CheckBox) findViewById(R.id.question_three_answer_velma);
@@ -52,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
     /**
         get the user's answer, compare it to the correct answer
      */
+
+    // Is there a way to dismiss the keyboard after answering this?
+    // your question methods are in snake_case, they should be camelCase.
     public int question_one_points(){
         String user_answer =  user_answered_question_one.getText().toString().trim();
 
@@ -66,12 +71,24 @@ public class MainActivity extends AppCompatActivity {
         Determine if right radio button chosen for question 2
      */
 
-    public int question_two_points() {
-        boolean isMysteryMachine = mysteryMachineButton.isChecked();
 
-        if(isMysteryMachine){
-            score += 2;
-        }
+    // You don't need to create an incremental boolean to do the check
+    // you could just test mysterMachineButton.isChecked() directly.
+    // example below.  I'll leave this one comment here, but it applies below.
+
+    // Your questions don't word wrap, so on the device I was testing
+    // you couldn't read the whole question.
+    public int question_two_points() {
+//        boolean isMysteryMachine = mysteryMachineButton.isChecked();
+//
+//        if(isMysteryMachine){
+//            score += 2;
+//        }
+
+        // You may want to be more verbose with some of your variables so it's more
+        // obvious as to what it is by reading it.  i.e. I had to check around the code to
+        // confirm this was a Radio button (vs checkbox button)
+        if (mysteryMachineButton.isChecked()) { score += 2; }
 
         return score;
     }
@@ -80,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
         determine if correct boxes for question 3 are checked, add points for each box checked
      */
 
+
+    // You may want to revisit the logic here.  If a user ticks off all your boxes, they get
+    // maximum score.
     public int question_three_points(){
         boolean isVelmaChecked = velmaCheckBox.isChecked();
         boolean isShaggyChecked = shaggyCheckBox.isChecked();
@@ -99,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
     /*
         get the user's answer, compare it to the correct answer
      */
+
+    // I'd recommend taking the users answer and your answer, making both lowercase and then
+    // doing the comparison.  It'll make the check a little more robust and forgiving.
     public int question_four_points(){
         String user_answer =  user_answered_question_four.getText().toString().trim();
 
@@ -112,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
      /*
         Determine if right radio button chosen for question 5
      */
+
+     // Have you thought about supplying a warning or any feedback if
+    // The user choose not to select anything?  You may want to do a check at the end
+    // And pop a toast that all questions weren't answered.
     public int question_five_points() {
         boolean isFrankWelker = frankWelkerButton.isChecked();
 
@@ -177,6 +204,8 @@ public class MainActivity extends AppCompatActivity {
         determine if correct boxes for question 10 are checked, add points for each box checked
      */
 
+     // You may want to revisit the logic here.  If a user ticks off all your boxes, they get
+    // maximum score.
     public int question_ten_points(){
         boolean isDoobyDooChecked = doobyDooCheckBox.isChecked();
         boolean isSpookyDooChecked = spookyDooCheckBox.isChecked();
@@ -202,6 +231,9 @@ public class MainActivity extends AppCompatActivity {
     /*
         add the points for each question to the total score
      */
+
+    // Prior to calculating, you may want to verify whether all the questions have been answered.
+
     public int calculateScore(){
         return question_one_points() + question_two_points() + question_three_points() +
                 question_four_points() + question_five_points() + question_six_points() +
@@ -211,6 +243,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the score value on the screen.
      */
+
+    // You never use your variable parameter.  Consider removing it or using it.
+    // Why did you label this one private while all the others are public.  You should review that.
     private void display(int number) {
         TextView totalScore = (TextView) findViewById(R.id.total_score);
         totalScore.setText("" + score);
@@ -220,6 +255,10 @@ public class MainActivity extends AppCompatActivity {
         Disable the button so it can't be pressed again
         Display the score
      */
+
+    // Perhaps you might want to supply some feedback as to how well they did.
+    // What is the maximum score they could have gotten?
+    // What did they get right vs wrong?
     public void submitScore(View view)
     {
         Button submitButton = (Button) findViewById(R.id.submit);
