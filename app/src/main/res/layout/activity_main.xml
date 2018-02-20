@@ -34,8 +34,7 @@
                 android:text="@string/displayedQuizName"
                 android:gravity="center"
                 android:textColor="@color/quizNameColor"
-                android:textSize="@dimen/quizNameSize"
-                android:textStyle="bold" />
+                android:textSize="@dimen/quizNameSize" />
 
             <TextView
                 android:id="@+id/question_one"
@@ -44,7 +43,6 @@
                 android:layout_below="@id/scooby_head"
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_one_text"
                 android:textSize="@dimen/question_size" />
 
@@ -52,13 +50,10 @@
                 android:id="@+id/question_one_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:textColor="@color/answerColor"
                 android:layout_below="@id/question_one"
                 android:hint="@string/hints"
-                android:textStyle="bold"
-                android:textColorHint="@color/answerColor"
-                android:inputType="textCapWords" />
+                android:textColorHint="@color/answerColor" />
 
 
             <TextView
@@ -68,7 +63,6 @@
                 android:layout_below="@id/question_one_answer"
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_two_text"
                 android:textSize="@dimen/question_size" />
 
@@ -83,23 +77,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question_two_correct_answer"
-                    android:textColor="@color/answerColor"
-                    android:textStyle="bold" />
+                    android:textColor="@color/answerColor" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question_two_answer_a"
-                    android:textColor="@color/answerColor"
-                    android:textStyle="bold" />
+                    android:textColor="@color/answerColor" />
 
                 <RadioButton
                     android:id="@+id/question_two_answer_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_two_answer_b" />
 
                 <RadioButton
@@ -107,7 +98,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_two_answer_c" />
 
             </RadioGroup>
@@ -122,8 +112,7 @@
                 android:layout_marginTop="28dp"
                 android:text="@string/question_three_text"
                 android:textColor="@color/questionColor"
-                android:textSize="@dimen/question_size"
-                android:textStyle="bold" />
+                android:textSize="@dimen/question_size" />
 
             <CheckBox
                 android:id="@+id/question_three_answer_velma"
@@ -131,7 +120,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_three"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
                 android:text="@string/question3_box1"/>
 
             <CheckBox
@@ -139,7 +127,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
                 android:layout_below="@id/question_three_answer_velma"
                 android:text="@string/question3_box2"/>
 
@@ -151,8 +138,7 @@
                 android:layout_alignStart="@+id/question_three_answer_barney"
                 android:layout_below="@+id/question_three"
                 android:text="@string/question3_box3"
-                android:textColor="@color/answerColor"
-                android:textStyle="bold" />
+                android:textColor="@color/answerColor" />
 
             <CheckBox
                 android:id="@+id/question_three_answer_barney"
@@ -162,8 +148,7 @@
                 android:layout_toEndOf="@+id/question_eight_button_group"
                 android:layout_toRightOf="@+id/question_eight_button_group"
                 android:text="@string/question3_box4"
-                android:textColor="@color/answerColor"
-                android:textStyle="bold" />
+                android:textColor="@color/answerColor" />
 
             <TextView
                 android:id="@+id/question_four"
@@ -172,7 +157,6 @@
                 android:layout_below="@id/question_three_answer_barney"
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_four_text"
                 android:textSize="@dimen/question_size" />
 
@@ -182,10 +166,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_four"
                 android:hint="@string/hints"
-                android:textStyle="bold"
                 android:textColor="@color/answerColor"
-                android:textColorHint="@color/answerColor"
-                android:inputType="textCapWords" />
+                android:textColorHint="@color/answerColor" />
 
             <TextView
                 android:id="@+id/question_five"
@@ -194,7 +176,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_four_answer"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_five_text"
                 android:textSize="@dimen/question_size" />
 
@@ -209,7 +190,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_five_answer_a" />
 
                 <RadioButton
@@ -217,7 +197,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_five_answer_b" />
 
                 <RadioButton
@@ -225,7 +204,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_five_correct_answer" />
 
                 <RadioButton
@@ -233,7 +211,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_five_answer_c" />
 
             </RadioGroup>
@@ -245,7 +222,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_five_button_group"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_six_text"
                 android:textSize="@dimen/question_size" />
 
@@ -260,7 +236,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_six_answer_a" />
 
                 <RadioButton
@@ -268,7 +243,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_six_answer_b" />
 
                 <RadioButton
@@ -276,7 +250,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_six_answer_c" />
 
                 <RadioButton
@@ -284,7 +257,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_six_correct_answer" />
 
             </RadioGroup>
@@ -296,7 +268,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_six_button_group"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_seven_text"
                 android:textSize="@dimen/question_size" />
 
@@ -306,10 +277,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_seven"
                 android:hint="@string/hints"
-                android:textStyle="bold"
                 android:textColor="@color/answerColor"
-                android:textColorHint="@color/answerColor"
-                android:inputType="textCapWords" />
+                android:textColorHint="@color/answerColor" />
 
             <TextView
                 android:id="@+id/question_eight"
@@ -318,7 +287,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_seven_answer"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_eight_text"
                 android:textSize="@dimen/question_size" />
 
@@ -333,7 +301,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_eight_answer_a" />
 
                 <RadioButton
@@ -341,7 +308,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_eight_correct_answer" />
 
                 <RadioButton
@@ -349,7 +315,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_eight_answer_b" />
 
                 <RadioButton
@@ -357,7 +322,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_eight_answer_c" />
 
             </RadioGroup>
@@ -369,7 +333,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_eight_button_group"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_nine_text"
                 android:textSize="@dimen/question_size" />
 
@@ -384,7 +347,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_nine_answer_a" />
 
                 <RadioButton
@@ -392,7 +354,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_nine_answer_b" />
 
                 <RadioButton
@@ -400,7 +361,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_nine_correct_answer" />
 
                 <RadioButton
@@ -408,7 +368,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/answerColor"
-                    android:textStyle="bold"
                     android:text="@string/question_nine_answer_c" />
 
             </RadioGroup>
@@ -420,7 +379,6 @@
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_below="@id/question_nine_button_group"
                 android:textColor="@color/questionColor"
-                android:textStyle="bold"
                 android:text="@string/question_ten_text"
                 android:textSize="@dimen/question_size" />
 
@@ -429,7 +387,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
                 android:layout_below="@id/question_ten"
                 android:text="@string/question10_box1"/>
 
@@ -443,15 +400,13 @@
                 android:layout_toEndOf="@+id/question_two_button_group"
                 android:layout_toRightOf="@+id/question_two_button_group"
                 android:text="@string/question10_box2"
-                android:textColor="@color/answerColor"
-                android:textStyle="bold" />
+                android:textColor="@color/answerColor" />
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Spooky_Doo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
                 android:layout_below="@id/question_ten_answer_Dooby_Doo"
                 android:text="@string/question10_box3"/>
 
@@ -463,15 +418,13 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignStart="@+id/question_ten_answer_Darling_Doo"
                 android:text="@string/question10_box4"
-                android:textColor="@color/answerColor"
-                android:textStyle="bold" />
+                android:textColor="@color/answerColor" />
 
             <CheckBox
                 android:id="@+id/question_ten_answer_Harold_Doo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/answerColor"
-                android:textStyle="bold"
                 android:layout_below="@id/question_ten_answer_Spooky_Doo"
                 android:text="@string/question10_box5"/>
 
@@ -483,8 +436,7 @@
                 android:layout_alignStart="@+id/question_ten_answer_Rumsy_Doo"
                 android:layout_below="@+id/question_ten_answer_Rumsy_Doo"
                 android:text="@string/question10_box6"
-                android:textColor="@color/answerColor"
-                android:textStyle="bold" />
+                android:textColor="@color/answerColor" />
 
         </RelativeLayout>
 
@@ -525,7 +477,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/answerColor"
             android:textSize="@dimen/question_size"
-            android:textStyle="bold"
             android:text="@string/scoreText"
             android:textAllCaps="true"/>
 
@@ -535,7 +486,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/answerColor"
             android:textSize="@dimen/question_size"
-            android:textStyle="bold"
             android:text="@string/ScoreAmount" />
 
     </LinearLayout>
