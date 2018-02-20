@@ -15,20 +15,23 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
+    EditText user_answered
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        user_answered = (EditText) findViewById(R.id.question_one_answer);
     }
 
     /**
         get the user's answer, compare it to the correct answer
      */
-    public int question_one_points(){
+    public int question_one_points(String user_answered){
         String correct_answer = "Scoobert Doo";
 
-        EditText user_answered = (EditText) findViewById(R.id.question_one_answer);
+
         String user_answer =  user_answered.getText().toString();
 
         if(user_answer.equals(correct_answer)){
@@ -205,8 +208,8 @@ public class MainActivity extends AppCompatActivity {
     /*
         add the points for each question to the total score
      */
-    public int calculateScore(){
-        return question_one_points() + question_two_points() + question_three_points() +
+    public int calculateScore(String user_answered){
+        return question_one_points(user_answered) + question_two_points() + question_three_points() +
                 question_four_points() + question_five_points() + question_six_points() +
                 question_seven_points() + question_eight_points() + question_nine_points() + question_ten_points();
     }
@@ -223,11 +226,11 @@ public class MainActivity extends AppCompatActivity {
         Disable the button so it can't be pressed again
         Display the score
      */
-    public void submitScore(View view)
+    public void submitScore(View view, String user_answered)
     {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
-        display(calculateScore());
+        display(calculateScore(user_answered));
         Toast.makeText(this, String.format(getString(R.string.scoreMessage), score), Toast.LENGTH_SHORT).show();
     }
 
