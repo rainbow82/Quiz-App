@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         get the user's answer, compare it to the correct answer
      */
     public int question_one_points(){
-        String user_answer =  user_answered_question_one.getText().toString();
+        String user_answer =  user_answered_question_one.getText().toString().trim();
 
         if(user_answer.equals("Scoobert Doo")){
             score += 2 ;
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         get the user's answer, compare it to the correct answer
      */
     public int question_four_points(){
-        String user_answer =  user_answered_question_four.getText().toString();
+        String user_answer =  user_answered_question_four.getText().toString().trim();
 
         if(user_answer.equals("Coolsville")){
             return score += 2 ;
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
      allow first or full name to count as correct
      */
     public int question_seven_points(){
-        String user_answer =  user_answered_question_seven.getText().toString();
+        String user_answer =  user_answered_question_seven.getText().toString().trim();
 
         if(user_answer.equals("Scrappy")){
             return score += 2 ;
