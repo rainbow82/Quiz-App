@@ -15,26 +15,47 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
-    EditText user_answered;
+    EditText user_answered_question_one;
+    RadioButton mysteryMachineButton;
+    CheckBox velmaCheckBox;
+    CheckBox shaggyCheckBox;
+    EditText user_answered_question_four;
+    RadioButton frankWelkerButton;
+    RadioButton scoobySnacksButton;
+    EditText user_answered_question_seven;
+    RadioButton greatDaneButton;
+    RadioButton year1969Button;
+    CheckBox doobyDooCheckBox;
+    CheckBox spookyDooCheckBox;
+    CheckBox scoobyDumCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        user_answered = (EditText) findViewById(R.id.question_one_answer);
+        user_answered_question_one = (EditText) findViewById(R.id.question_one_answer);
+        mysteryMachineButton = (RadioButton) findViewById(R.id.question_two_correct_answer);
+        velmaCheckBox = (CheckBox) findViewById(R.id.question_three_answer_velma);
+        shaggyCheckBox = (CheckBox) findViewById(R.id.question_three_answer_shaggy);
+        user_answered_question_four = (EditText) findViewById(R.id.question_four_answer);
+        frankWelkerButton = (RadioButton) findViewById(R.id.question_five_correct_answer);
+        scoobySnacksButton = (RadioButton) findViewById(R.id.question_six_correct_answer);
+        user_answered_question_seven = (EditText) findViewById(R.id.question_seven_answer);
+        greatDaneButton = (RadioButton) findViewById(R.id.question_eight_correct_answer);
+        year1969Button = (RadioButton) findViewById(R.id.question_nine_correct_answer);
+        doobyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Dooby_Doo);
+        spookyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Spooky_Doo);
+        scoobyDumCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Scooby_Dum);
     }
 
     /**
         get the user's answer, compare it to the correct answer
      */
-    public int question_one_points(String user_answered){
-        String correct_answer = "Scoobert Doo";
+    public int question_one_points(){
+        String user_answer =  user_answered_question_one.getText().toString();
 
-
-        String user_answer =  user_answered.getText().toString();
-
-        if(user_answer.equals(correct_answer)){
+        if(user_answer.equals("Scoobert Doo")){
             score += 2 ;
         }
 
@@ -46,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public int question_two_points() {
-
-        RadioButton mysteryMachineButton = (RadioButton) findViewById(R.id.question_two_correct_answer);
         boolean isMysteryMachine = mysteryMachineButton.isChecked();
 
         if(isMysteryMachine){
@@ -62,11 +81,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public int question_three_points(){
-
-        CheckBox velmaCheckBox = (CheckBox) findViewById(R.id.question_three_answer_velma);
         boolean isVelmaChecked = velmaCheckBox.isChecked();
-
-        CheckBox shaggyCheckBox = (CheckBox) findViewById(R.id.question_three_answer_shaggy);
         boolean isShaggyChecked = shaggyCheckBox.isChecked();
 
         if(isVelmaChecked){
@@ -81,16 +96,13 @@ public class MainActivity extends AppCompatActivity {
         return score;
     }
 
-    /**
-     get the user's answer, compare it to the correct answer
+    /*
+        get the user's answer, compare it to the correct answer
      */
     public int question_four_points(){
-        String correct_answer = "Coolsville";
+        String user_answer =  user_answered_question_four.getText().toString();
 
-        EditText user_answered = (EditText) findViewById(R.id.question_four_answer);
-        String user_answer =  user_answered.getText().toString();
-
-        if(user_answer.equals(correct_answer)){
+        if(user_answer.equals("Coolsville")){
             return score += 2 ;
         }
 
@@ -100,10 +112,7 @@ public class MainActivity extends AppCompatActivity {
      /*
         Determine if right radio button chosen for question 5
      */
-
     public int question_five_points() {
-
-        RadioButton frankWelkerButton = (RadioButton) findViewById(R.id.question_five_correct_answer);
         boolean isFrankWelker = frankWelkerButton.isChecked();
 
         if(isFrankWelker){
@@ -113,13 +122,10 @@ public class MainActivity extends AppCompatActivity {
         return score;
     }
 
-         /*
+    /*
         Determine if right radio button chosen for question 6
      */
-
     public int question_six_points() {
-
-        RadioButton scoobySnacksButton = (RadioButton) findViewById(R.id.question_six_correct_answer);
         boolean isScoobySnacks = scoobySnacksButton.isChecked();
 
         if(isScoobySnacks){
@@ -134,9 +140,7 @@ public class MainActivity extends AppCompatActivity {
      allow first or full name to count as correct
      */
     public int question_seven_points(){
-
-        EditText user_answered = (EditText) findViewById(R.id.question_seven_answer);
-        String user_answer =  user_answered.getText().toString();
+        String user_answer =  user_answered_question_seven.getText().toString();
 
         if(user_answer.equals("Scrappy")){
             return score += 2 ;
@@ -148,8 +152,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int question_eight_points() {
-
-        RadioButton greatDaneButton = (RadioButton) findViewById(R.id.question_eight_correct_answer);
         boolean isGreatDane = greatDaneButton.isChecked();
 
         if(isGreatDane){
@@ -160,8 +162,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int question_nine_points() {
-
-        RadioButton year1969Button = (RadioButton) findViewById(R.id.question_nine_correct_answer);
         boolean isyear1969 = year1969Button.isChecked();
 
         if(isyear1969){
@@ -178,14 +178,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public int question_ten_points(){
-
-        CheckBox doobyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Dooby_Doo);
         boolean isDoobyDooChecked = doobyDooCheckBox.isChecked();
-
-        CheckBox spookyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Spooky_Doo);
         boolean isSpookyDooChecked = spookyDooCheckBox.isChecked();
-
-        CheckBox scoobyDumCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Scooby_Dum);
         boolean isScoobyDumChecked = scoobyDumCheckBox.isChecked();
 
         if(isDoobyDooChecked){
@@ -208,8 +202,8 @@ public class MainActivity extends AppCompatActivity {
     /*
         add the points for each question to the total score
      */
-    public int calculateScore(String user_answered){
-        return question_one_points(user_answered) + question_two_points() + question_three_points() +
+    public int calculateScore(){
+        return question_one_points() + question_two_points() + question_three_points() +
                 question_four_points() + question_five_points() + question_six_points() +
                 question_seven_points() + question_eight_points() + question_nine_points() + question_ten_points();
     }
@@ -226,15 +220,17 @@ public class MainActivity extends AppCompatActivity {
         Disable the button so it can't be pressed again
         Display the score
      */
-    public void submitScore(View view, String user_answered)
+    public void submitScore(View view)
     {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
-        display(calculateScore(user_answered));
+        display(calculateScore());
         Toast.makeText(this, String.format(getString(R.string.scoreMessage), score), Toast.LENGTH_SHORT).show();
     }
 
-
+    /*
+        clear the users answers and restart the quiz
+     */
     public void clearScreen(View view){
         Intent intent = getIntent();
         finish();
