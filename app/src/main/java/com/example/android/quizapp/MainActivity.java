@@ -1,10 +1,13 @@
 package com.example.android.quizapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -28,6 +31,20 @@ public class MainActivity extends AppCompatActivity {
     CheckBox doobyDooCheckBox;
     CheckBox spookyDooCheckBox;
     CheckBox scoobyDumCheckBox;
+    View.OnKeyListener listener = new View.OnKeyListener() {
+        @Override
+        public boolean onKey(View v, int keyCode, KeyEvent event) {
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                v.setFocusable(false);
+                v.setFocusableInTouchMode(true);
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         doobyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Dooby_Doo);
         spookyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Spooky_Doo);
         scoobyDumCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Scooby_Dum);
+
+        user_answered_question_one.setOnKeyListener(listener);
+        user_answered_question_four.setOnKeyListener(listener);
+        user_answered_question_seven.setOnKeyListener(listener);
     }
 
     /**
