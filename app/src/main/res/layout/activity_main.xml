@@ -52,6 +52,7 @@
                 android:textColor="@color/answerColor"
                 android:layout_below="@id/question_one"
                 android:hint="@string/hints"
+                android:inputType="textCapWords"
                 android:textColorHint="@color/answerColor" />
 
 
@@ -165,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_four"
                 android:hint="@string/hints"
+                android:inputType="textCapWords"
                 android:textColor="@color/answerColor"
                 android:textColorHint="@color/answerColor" />
 
@@ -276,6 +278,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/question_seven"
                 android:hint="@string/hints"
+                android:inputType="textCapWords"
                 android:textColor="@color/answerColor"
                 android:textColorHint="@color/answerColor" />
 
