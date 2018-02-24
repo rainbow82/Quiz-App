@@ -10,4 +10,6 @@
 
     <dimen name="scoreLayou_margintop">10dp</dimen>
 
+    <dimen name="card_width">500dp</dimen>
+
 </resources>
