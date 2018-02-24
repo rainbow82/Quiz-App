@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
     /*
         Disable the button so it can't be pressed again
+        Show toast message of points vs total possible points
         Display the score
      */
     public void submitScore(View view)
