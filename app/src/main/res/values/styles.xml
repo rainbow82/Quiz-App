@@ -8,7 +8,6 @@
         <item name="colorAccent">#AB47BC</item>
         <item name="fontFamily">@font/scoobydoo</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:inputType">textCapWords</item>
     </style>
 
 
