@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
+    int possibleScore = 26;
     EditText user_answered_question_one;
     RadioButton mysteryMachineButton;
     CheckBox velmaCheckBox;
@@ -34,19 +35,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        user_answered_question_one = (EditText) findViewById(R.id.question_one_answer);
-        mysteryMachineButton = (RadioButton) findViewById(R.id.question_two_correct_answer);
-        velmaCheckBox = (CheckBox) findViewById(R.id.question_three_answer_velma);
-        shaggyCheckBox = (CheckBox) findViewById(R.id.question_three_answer_shaggy);
-        user_answered_question_four = (EditText) findViewById(R.id.question_four_answer);
-        frankWelkerButton = (RadioButton) findViewById(R.id.question_five_correct_answer);
-        scoobySnacksButton = (RadioButton) findViewById(R.id.question_six_correct_answer);
-        user_answered_question_seven = (EditText) findViewById(R.id.question_seven_answer);
-        greatDaneButton = (RadioButton) findViewById(R.id.question_eight_correct_answer);
-        year1969Button = (RadioButton) findViewById(R.id.question_nine_correct_answer);
-        doobyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Dooby_Doo);
-        spookyDooCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Spooky_Doo);
-        scoobyDumCheckBox = (CheckBox) findViewById(R.id.question_ten_answer_Scooby_Dum);
+        user_answered_question_one = findViewById(R.id.question_one_answer);
+        mysteryMachineButton = findViewById(R.id.question_two_correct_answer);
+        velmaCheckBox = findViewById(R.id.question_three_answer_velma);
+        shaggyCheckBox = findViewById(R.id.question_three_answer_shaggy);
+        user_answered_question_four = findViewById(R.id.question_four_answer);
+        frankWelkerButton =  findViewById(R.id.question_five_correct_answer);
+        scoobySnacksButton = findViewById(R.id.question_six_correct_answer);
+        user_answered_question_seven = findViewById(R.id.question_seven_answer);
+        greatDaneButton = findViewById(R.id.question_eight_correct_answer);
+        year1969Button = findViewById(R.id.question_nine_correct_answer);
+        doobyDooCheckBox =  findViewById(R.id.question_ten_answer_Dooby_Doo);
+        spookyDooCheckBox = findViewById(R.id.question_ten_answer_Spooky_Doo);
+        scoobyDumCheckBox = findViewById(R.id.question_ten_answer_Scooby_Dum);
     }
 
     /**
@@ -225,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         Button submitButton = (Button) findViewById(R.id.submit);
         submitButton.setEnabled(false);
         display(calculateScore());
-        Toast.makeText(this, String.format(getString(R.string.scoreMessage), score), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, String.format(getString(R.string.scoreMessage), score, possibleScore), Toast.LENGTH_SHORT).show();
     }
 
     /*
