@@ -12,4 +12,10 @@
 
     <dimen name="card_width">500dp</dimen>
 
+    <dimen name="question_padding_top">5dp</dimen>
+
+    <dimen name="answer_padding_top">20dp</dimen>
+
+    <dimen name="cardCornerRadius">4dp</dimen>
+
 </resources>

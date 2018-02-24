@@ -29,6 +29,8 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/scooby_head"
                 android:layout_toRightOf="@+id/scooby_head"
                 android:gravity="center"
@@ -43,10 +45,12 @@
                 android:layout_below="@id/textView"
                 android:layout_marginTop="@dimen/questionMarginTop"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="4dp">
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius">
 
                 <TextView
                     android:id="@+id/question_one"
+                    android:paddingTop="@dimen/question_padding_top"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/scooby_head"
@@ -58,21 +62,27 @@
 
                 <EditText
                     android:id="@+id/question_one_answer"
+                    android:paddingTop="@dimen/answer_padding_top"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/question_one"
                     android:layout_marginTop="@dimen/questionMarginTop"
                     android:hint="@string/hints"
+                    android:inputType="textCapWords"
                     android:textColor="@color/answerColor"
-                    android:textColorHint="@color/answerColor" />
+                    android:textColorHint="@color/answerColor"
+                    />
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_two"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_one">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -126,12 +136,15 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_three"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_two">
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -186,11 +199,13 @@
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_four"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_three">
 
                 <TextView
@@ -214,11 +229,13 @@
                     android:textColorHint="@color/answerColor" />
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_five"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_four">
 
                 <LinearLayout
@@ -273,11 +290,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_six"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_five">
 
                 <LinearLayout
@@ -332,11 +351,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_seven"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_six">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -365,11 +386,13 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_eight"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_seven">
 
                 <LinearLayout
@@ -424,11 +447,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_nine"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_eight">
 
             <LinearLayout
@@ -483,11 +508,13 @@
             </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_ten"
                 android:layout_width="@dimen/card_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/questionMarginTop"
+                card_view:cardBackgroundColor="@color/cardBackgroudColor"
+                card_view:cardCornerRadius="@dimen/cardCornerRadius"
                 android:layout_below="@id/card_nine">
                 <RelativeLayout
                     android:layout_width="wrap_content"

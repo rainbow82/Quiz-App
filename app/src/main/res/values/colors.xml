@@ -6,4 +6,5 @@
     <color name="quizNameColor">#512DA8</color>
     <color name="questionColor">#1B5E20</color>
     <color name="answerColor">#C51162</color>
+    <color name="cardBackgroudColor">#FFF59D</color>
 </resources>
