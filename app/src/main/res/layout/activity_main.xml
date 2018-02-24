@@ -49,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/scooby_head"
-                    android:minLines="2"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:text="@string/question_one_text"
                     android:textColor="@color/questionColor"
                     android:textSize="@dimen/question_size"
@@ -80,7 +80,7 @@
                 <TextView
                     android:id="@+id/question_two"
                     android:layout_width="wrap_content"
-                    android:minLines="2"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/card_one"
                     android:textColor="@color/questionColor"
@@ -139,8 +139,7 @@
                     android:id="@+id/question_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/question_ten"
-                    android:layout_alignRight="@+id/question_ten"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:text="@string/question_three_text"
                     android:textColor="@color/questionColor"
                     android:textSize="@dimen/question_size" />
@@ -197,7 +196,7 @@
                     android:id="@+id/question_four"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_three_answer_barney"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:textColor="@color/questionColor"
                     android:text="@string/question_four_text"
                     android:textSize="@dimen/question_size" />
@@ -230,8 +229,7 @@
                         android:id="@+id/question_five"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        android:layout_below="@id/question_four_answer"
+                        android:paddingLeft="@dimen/question_margin_left"
                         android:textColor="@color/questionColor"
                         android:text="@string/question_five_text"
                         android:textSize="@dimen/question_size" />
@@ -290,7 +288,7 @@
                         android:id="@+id/question_six"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/question_five_button_group"
+                        android:paddingLeft="@dimen/question_margin_left"
                         android:textColor="@color/questionColor"
                         android:text="@string/question_six_text"
                         android:textSize="@dimen/question_size" />
@@ -348,7 +346,7 @@
                     android:id="@+id/question_seven"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_six_button_group"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:textColor="@color/questionColor"
                     android:text="@string/question_seven_text"
                     android:textSize="@dimen/question_size" />
@@ -382,6 +380,7 @@
                         android:id="@+id/question_eight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/question_margin_left"
                         android:textColor="@color/questionColor"
                         android:text="@string/question_eight_text"
                         android:textSize="@dimen/question_size" />
@@ -440,6 +439,7 @@
                     android:id="@+id/question_nine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/question_margin_left"
                     android:textColor="@color/questionColor"
                     android:text="@string/question_nine_text"
                     android:textSize="@dimen/question_size" />
@@ -496,6 +496,7 @@
                         android:id="@+id/question_ten"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/question_margin_left"
                         android:textColor="@color/questionColor"
                         android:text="@string/question_ten_text"
                         android:textSize="@dimen/question_size" />
