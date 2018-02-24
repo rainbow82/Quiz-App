@@ -9,7 +9,7 @@
 
     <!-- question text -->
     <string name="question_one_text">1. What is Scooby\'s full name?</string>
-    <string name="question_two_text">2. What is the nickname of the vehicle the gang rode in?</string>
+    <string name="question_two_text">2. What is the nickname of the\n vehicle the gang rode in?</string>
     <string name="question_three_text">3. Choose the members of Mystery Inc</string>
     <string name="question_four_text">4. What city is the gang from?</string>
     <string name="question_five_text">5. Who has been the voice of Freddy since the beginning of the show?</string>
