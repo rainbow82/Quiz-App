@@ -630,7 +630,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/scoreLayou_margintop">
+            android:layout_marginTop="@dimen/scoreLayout_margintop"
+            android:paddingTop="@dimen/scorePadding"
+            android:paddingBottom="@dimen/scorePadding">
 
             <TextView
                 android:id="@+id/scoreText"
