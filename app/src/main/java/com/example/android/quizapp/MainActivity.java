@@ -1,9 +1,11 @@
 package com.example.android.quizapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -31,6 +33,24 @@ public class MainActivity extends AppCompatActivity {
     CheckBox spookyDooCheckBox;
     CheckBox scoobyDumCheckBox;
 
+    /*
+        hide the keyboard when user hits enter button
+     */
+    View.OnKeyListener listener = new View.OnKeyListener() {
+        @Override
+        public boolean onKey(View v, int keyCode, KeyEvent event) {
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                v.setFocusable(false);
+                v.setFocusableInTouchMode(true);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,34 +70,11 @@ public class MainActivity extends AppCompatActivity {
         spookyDooCheckBox = findViewById(R.id.question_ten_answer_Spooky_Doo);
         scoobyDumCheckBox = findViewById(R.id.question_ten_answer_Scooby_Dum);
 
-        user_answered_question_one.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    hideKeyboard(v);
-                }
-            }
-        });
+        user_answered_question_one.setOnKeyListener(listener);
+        user_answered_question_four.setOnKeyListener(listener);
+        user_answered_question_seven.setOnKeyListener(listener);
 
 
-        user_answered_question_four.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    hideKeyboard(v);
-                }
-            }
-        });
-
-
-        user_answered_question_seven.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    hideKeyboard(v);
-                }
-            }
-        });
     }
 
     /**
